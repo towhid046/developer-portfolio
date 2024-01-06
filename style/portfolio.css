@@ -60,17 +60,14 @@ nav a{
 }
 /* banner related style */
 .banner{
-    background-image: url('/images/header_bg.png');
-    background-repeat: no-repeat;
-    background-position: bottom right;
     padding: 40px 30px 0px 150px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 header{
-    background-image: url('/images//developer.png');
-    background-position: left ;
+    background-image:url('/images/developer.png'), url('/images/header_bg.png');
+    background-position: left, bottom right;
     background-repeat: no-repeat;
 }
 .banner-content{
@@ -131,6 +128,9 @@ main{
     color: #474747;
 }
 /* what i do relate style */
+.what-i-do{
+    margin-bottom: 100px;
+}
 .whatIDo-des{
     max-width: 910px;
     margin: 30px auto;
@@ -145,4 +145,56 @@ main{
     border-radius: 5px;
     background: #FFF;
     box-shadow: 0px 6px 50px 0px rgba(0, 0, 0, 0.06);
+}
+.skill img{
+    width: 44px;
+}
+.skill .skill-title{
+    margin: 30px 0 20px 0;
+    color: #181818;
+    font-size: 20px;
+    font-weight: 700;
+}
+.skill .skill-description{
+    color: #757575;
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 400;
+}
+/* education related style */
+.education-exprience-wrapper{
+    display: flex;
+    justify-content: space-between;
+    gap: 70px;
+}
+.education-title{
+    color: #474747;
+    font-size: 30px;
+    font-weight: 700;
+}
+.education-info-title{
+    margin-top: 30px;
+    color: #474747;
+    font-size: 25px;
+    font-weight: 700;
+}
+.education-info-date{
+    margin: 10px 0 20px 0;
+    font-weight: 600;
+    color: #757575;
+    font-size: 20px;
+}
+.education-info-description{
+    color: #757575;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    margin-bottom: 30px;
+}
+.education-info hr{
+    border-color: #7575751a;
+}
+.download-cv{
+    margin-top: 20px;
+    text-align: center;
 }
