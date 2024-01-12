@@ -8,6 +8,12 @@
 body{
     font-family: 'Open Sans', sans-serif;
 }
+header, main, footer{
+    padding: 0 20px;
+}
+p{
+    text-align: justify;
+}
 .text-orange{
     color: #FD6E0A;
 }
@@ -28,6 +34,7 @@ nav{
     font-size: 45px;
     color: #181818;
     font-weight: 800;
+    cursor: pointer;
 }
 nav > ul{
     display: flex;
@@ -52,11 +59,17 @@ nav a{
     font-weight: 700;
     color: #fff;
     cursor: pointer;
+    margin-bottom: 10px;
 }
 /* header relate style */
 .header{
     background-color: #FFF8F3;
     padding:50px 0 0 0;
+}
+header{
+    background-image:url('/images/developer.png'), url('/images/header_bg.png');
+    background-position: left, bottom right;
+    background-repeat: no-repeat;
 }
 /* banner related style */
 .banner{
@@ -64,11 +77,6 @@ nav a{
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-header{
-    background-image:url('/images/developer.png'), url('/images/header_bg.png');
-    background-position: left, bottom right;
-    background-repeat: no-repeat;
 }
 .banner-content{
     max-width: 585px;
@@ -91,7 +99,7 @@ header{
     margin-bottom: 20px;
 }
 /* main related style */
-main, .contact-wrapper{
+main, footer{
     max-width: 1140px;
     margin: 0 auto;
 }
@@ -111,8 +119,9 @@ main, .contact-wrapper{
     line-height: 30px;
 }
 .about-info-wrapper{
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
 }
 .about-info{
     text-align: center;
@@ -136,8 +145,8 @@ main, .contact-wrapper{
     margin: 30px auto;
 }
 .skills{
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 25px;
 }
 .skill{
@@ -212,6 +221,7 @@ footer{
 .contact-wrapper{
     display: flex;
     justify-content: space-between;
+    gap: 50px;
 }
 .contact-info, .contact-form{
     width: 50%;
@@ -245,10 +255,166 @@ input[type='text'], input[type='email'], textarea{
     width: 25px;
 }
 .copy-right{
-    text-align: center;
     padding: 50px 0 20px 0;
+}
+.copy-right > p{
+    text-align: center;
 }
 .copy-right  a{
     color: #757575;
     text-decoration: none;
+}
+
+/* Responsive related Style */
+.hide{
+    display: none;
+}
+/*----Responsive related style -----*/ 
+/* Media querry for small device */
+@media screen and (max-width: 595px) {
+    nav{
+        align-items: flex-start;
+        margin: 0;
+        padding: 0 20px;
+        margin-bottom: 40px;
+    }
+    nav > ul{
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 8px;
+    }
+    nav>h3.nav-title{
+        margin-top: -8px;    
+    }
+    .hire-me-btn{
+        font-size: 1rem;
+        padding: 7px 10px;
+    }
+
+    nav > ul > li{
+        margin:0;
+        font-size: 0.824rem;
+    }
+    .contact-wrapper, 
+    .education-exprience-wrapper,
+    .banner
+    {
+        flex-direction: column;
+    }
+    .skills, 
+    .about-info-wrapper
+    {
+        grid-template-columns: auto;
+    }
+    .about{
+        padding: 0;
+        margin-bottom: 50px;
+        background-color: #fff;
+    }
+    .contact-info, .contact-form, .banner-content, .banner > img{
+        width: 100%;
+    }
+    .banner{
+        padding: 20px;
+    }
+    .banner-welcome{
+        font-size: 2rem;
+    }
+    .banner-title{
+        font-size: 3rem;
+    }
+    header{
+        background-image: none;
+    }
+    footer{
+        padding-top: 50px;
+    }
+    .banner-content{
+        text-align: center;
+    }
+}
+
+/* Media querry for medium devices */
+@media screen and (min-width:596px) and (max-width:768px) {
+     nav{
+        align-items: center;
+        margin: 0;
+        padding: 0 20px;
+        margin-bottom: 40px;
+    }
+
+    .hire-me-btn{
+        font-size: 1.2rem;
+        padding: 10px 15px;
+    }
+
+
+    .contact-wrapper, 
+    .education-exprience-wrapper
+    {
+        flex-direction: column;
+    }
+    .skills,     
+    .about-info-wrapper
+    {
+        grid-template-columns: auto;
+    }
+    .banner > img{
+        width: 60%;
+    }
+    .contact-info,
+    .contact-form 
+    .banner-content, 
+    .contact-form
+    {
+        width: 100%;
+    }
+    .banner{
+        padding: 30px;
+    }
+    .banner-welcome{
+        font-size: 3rem;
+    }
+    .banner-title{
+        font-size: 4rem;
+    }
+    header{
+        background-image: none;
+    }
+    .about{
+        padding: 40px ;
+        margin-bottom: 50px;
+    }
+    footer{
+        padding-top: 50px;
+    }
+
+}
+
+/* Media querry for lage(tab) */
+@media screen and (min-width:769px) and (max-width:1100px) {
+    .contact-wrapper{
+        flex-direction: column;
+    }
+    .skills, 
+    .about-info-wrapper
+    {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .contact-info, .contact-form{
+        width: 100%;
+    }
+    .about{
+        padding: 70px ;
+        margin-bottom: 50px;
+    }
+    header{
+        background-image:none ;
+    }
+    .banner{
+        padding: 50px;
+    }
+    .banner > img{
+        width: 60%;
+    }
 }
